@@ -1,0 +1,23 @@
+<body>
+  <div class="container">
+    <header>
+      <h1>Add new bookmark</h1>
+      <form class="new-bookmark">
+        <input type="text" name="bmname" placeholder="Name">
+        <input type="text" name="bmurl" placeholder="URL">
+        <input type="submit" name="submit" value="Save">
+      </form>
+    </header>
+      <h1>Bookmarks</h1>
+      <ul>
+        {{#each bookmarks}}
+          {{> bookmark}}
+        {{/each}}
+      </ul>
+
+  </div>
+</body>
+
+<template name="bookmark">
+  <li><a href="{{url}}">{{name}}</a></li>
+</template>
